@@ -17,12 +17,12 @@
 - Sempre que liberar um Pokemon é possível capturar outro através da busca
 - Caso as 6 posições sejam ocupadas o usuário não pode mais buscar pokemons
 
-- Link da API: https://pokeapi.co/  <br>
-- Especificações: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=45%3A28100>  <br>
-- Layout Desktop: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=13%3A2617> <br>
-- Layout Mobile: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=41%3A18734> <br>
-- Style Guide: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=36%3A506> <br>
-- Componentes: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=21%3A24690> <br>
+- Link da API: https://pokeapi.co/ 
+- Especificações: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=45%3A28100> 
+- Layout Desktop: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=13%3A2617>
+- Layout Mobile: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=41%3A18734>
+- Style Guide: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=36%3A506>
+- Componentes: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=21%3A24690>
 # 
 ### Bibliotecas liberadas:
 - react-redux
@@ -37,7 +37,7 @@
 - prettier
 # 
 ### Resoluções:
-Desktop: 1280 x 720 <br>
+Desktop: 1280 x 720
 Mobile: 360 x 740
 ### Opcional
  - Teste unitário
