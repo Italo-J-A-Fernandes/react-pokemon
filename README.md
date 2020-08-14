@@ -18,7 +18,7 @@
 - Caso as 6 posições sejam ocupadas o usuário não pode mais buscar pokemons
 
 ### Links
-- Link da API: https://pokeapi.co/ 
+- Link da API: <https://pokeapi.co/> 
 - Especificações: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=45%3A28100> 
 - Layout Desktop: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=13%3A2617>
 - Layout Mobile: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=41%3A18734>
@@ -38,8 +38,8 @@
 - prettier
 
 ### Resoluções:
-Desktop: 1280 x 720  
-Mobile: 360 x 740
+ - Desktop: 1280 x 720  
+ - Mobile: 360 x 740
 ### Opcional
  - Teste unitário
  - Teste de integração
