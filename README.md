@@ -19,11 +19,10 @@
 
 ### Links
 - Link da API: <https://pokeapi.co/> 
-- Especificações: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=45%3A28100> 
-- Layout Desktop: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=13%3A2617>
-- Layout Mobile: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=41%3A18734>
-- Style Guide: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=36%3A506>
-- Componentes: <https://www.figma.com/file/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=21%3A24690>
+- Layout Desktop: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=13%3A13571&scaling=min-zoom>
+- Layout Mobile: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=41%3A18782&scaling=min-zoom>
+- Style Guide: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=36%3A2135&scaling=min-zoom>
+- Componentes: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=27%3A18584&scaling=min-zoom>
 
 ### Bibliotecas liberadas:
 - react-redux
