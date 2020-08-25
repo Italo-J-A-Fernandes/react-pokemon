@@ -1,3 +1,4 @@
+## LEIA ME PRIMEIRO
 ## Teste de Front -End ReactJS
 ### Executar aplicação
 `npm i && npm start` ou `yarn && yarn start`
@@ -17,6 +18,7 @@
 - Para Pokemon customizado o usuário pode editar qualquer informação (um pokemon só pode ter 2 tipos no máximo)
 - Sempre que liberar um Pokemon é possível capturar outro através da busca ou criando um customizado
 - Caso as 6 posições sejam ocupadas o usuário não pode mais buscar ou criar novos pokemons
+Obs.: Muita atenção ao link das issues por que lá estão descritos as tarefas para serem executadas
 
 ### Links
 - Link da API: <https://pokeapi.co/> 
@@ -38,8 +40,7 @@
 - styled-components
 - prettier
 - prop-types
-- typescript
-
+- typescript 
 ### Resoluções:
  - Desktop: 1280 x 720  
  - Mobile: 360 x 740 
