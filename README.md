@@ -11,11 +11,12 @@
 - Se ele capturar o Pokemon, esse Pokemon é exibido na barra a esquerda
 - Usuário pode capturar até 6 Pokemons
 - Selecionando qualquer Pokemon na barra da esquerda o usuário pode ver os detalhes do pokemon
+- Usuário pode editar o nome de um Pokemon capturado
 - Na barra da esquerda o usuário tem a possibilidade de criar um novo Pokemon customizado
-- Para Pokemon customizado o usuário pode editar todos os detalhes
-- Na janela de detalhes do Pokemon o usuário tem a opção de editar somente o nome do Pokemon ou liberar o Pokemon
-- Sempre que liberar um Pokemon é possível capturar outro através da busca
-- Caso as 6 posições sejam ocupadas o usuário não pode mais buscar pokemons
+- O formulários de criação de Pokemon deve conter todos controles de validação de campos
+- Para Pokemon customizado o usuário pode editar qualquer informação (um pokemon só pode ter 2 tipos no máximo)
+- Sempre que liberar um Pokemon é possível capturar outro através da busca ou criando um customizado
+- Caso as 6 posições sejam ocupadas o usuário não pode mais buscar ou criar novos pokemons
 
 ### Links
 - Link da API: <https://pokeapi.co/> 
@@ -23,6 +24,7 @@
 - Layout Mobile: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=41%3A18782&scaling=min-zoom>
 - Style Guide: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=36%3A2135&scaling=min-zoom>
 - Componentes: <https://www.figma.com/proto/l92meWj5EzwY3q8XZro1i0/Teste-Front?node-id=27%3A18584&scaling=min-zoom>
+- Issues: <https://bitbucket.org/fdtedsd/teste-frontend-react/issues>
 
 ### Bibliotecas liberadas:
 - react-redux
@@ -35,10 +37,12 @@
 - node-sass
 - styled-components
 - prettier
+- prop-types
+- typescript
 
 ### Resoluções:
  - Desktop: 1280 x 720  
- - Mobile: 360 x 740
+ - Mobile: 360 x 740 
 ### Opcional
  - Teste unitário
  - Teste de integração
