@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar';
+import Modal from '../../components/Modal';
 
 const MapPage = () => {
 
@@ -7,6 +8,9 @@ const MapPage = () => {
         <>
             <div className="map">
                 <Sidebar />
+                <Modal>
+
+                </Modal>
             </div>
         </>
     );

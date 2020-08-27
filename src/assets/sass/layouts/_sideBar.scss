@@ -11,21 +11,21 @@
         justify-content: center;
         width: 6.4rem;
         height: 6.4rem;
-        border: 0.4rem solid $color-green-dark;
+        border: 0.4rem solid $color-primary-dark;
         border-radius: 12.8rem;
         font-size: 4rem;
         font-weight: bold;
-        color: $color-green-dark;
+        color: $color-primary-dark;
         cursor: pointer;
         transition: all .2s;
-        background-color: $color-green;
+        background-color: $color-primary-default;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
 
         &:hover {
-            background-color: darken($color-green-dark, 0.5);
-            color: $color-green;
+            background-color: darken($color-primary-dark, 0.5);
+            color: $color-primary-default;
         }
 
         &:not(last-of-type) {
