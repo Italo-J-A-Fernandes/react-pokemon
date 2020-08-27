@@ -9,7 +9,7 @@ const MapPage = () => {
             <div className="map">
                 <Sidebar />
                 <Modal>
-
+                    <div style={{ height: '30rem', width: '30rem' }} />
                 </Modal>
             </div>
         </>

@@ -21,6 +21,7 @@
     }
 
     &__content {
+        position: relative;
         background-color: $color-neutral;
         box-shadow: 0 0 1px rgba($color-black, 0.3), 0 4px 8px rgba($color-black, 0.25);
         border-radius: 3px;

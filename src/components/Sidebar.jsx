@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from './Button';
+import plusIcon from '../assets/images/plus.png';
 
 const Sidebar = () => {
     return (
@@ -6,6 +8,9 @@ const Sidebar = () => {
             <div className="sidebar__item">
                 ?
             </div>
+            <Button
+                icon={<img src={plusIcon} alt="+" />}
+            />
         </div>
     );
 };
