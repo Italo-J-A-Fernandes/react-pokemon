@@ -6,7 +6,7 @@ import HomePage from './screens/Home/HomePage';
 const App = () => (
   <Switch>
     <Route path="/" exact component={HomePage} />
-    <Route path="/map" component={MapPage} />
+    <Route path="/map" exact component={MapPage} />
     <Route path="*" component={HomePage} />
   </Switch>
 );
