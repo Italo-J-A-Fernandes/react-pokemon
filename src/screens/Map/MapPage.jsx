@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
 import Modal from '../../components/Modal';
 
+import api from '../../services/api';
+
 const MapPage = () => {
   const [pokemons] = useState([]);
-  function buscaAPI() {
-    console.log('Buscar na API');
+  async function buscaAPI() {
+    const max = 807;
+    const min = 1;
+    const idPokemon = Math.floor(Math.random() * (max - min + 1) + min);
+    const pokemon = await api.get(`/pokemon/${idPokemon}`);
   }
 
   function exibeModal() {
