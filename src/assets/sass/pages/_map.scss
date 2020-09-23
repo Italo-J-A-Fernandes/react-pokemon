@@ -4,3 +4,21 @@
     background: url('../../images/pageBackground.png') center;
     background-size: cover;
 }
+
+.container-personagem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+
+  > .personagem{
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: url('../../images/ashFront.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+}
