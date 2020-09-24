@@ -5,7 +5,6 @@ import pokeball from '../../../assets/images/pokeball.png';
 const PokemonBusca = ({ resPok, capture }) => {
   return resPok ? (
     <div className="pokemon-busca-container">
-      {/* {console.log(resPok.abilities.map((hab) => hab.ability.name).join(','))} */}
       <Avatar src={resPok.sprites.front_default} />
       <div className="infoPokemon">
         <h1>{resPok.name}</h1>
