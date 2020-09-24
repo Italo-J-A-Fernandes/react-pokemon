@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import closeIcon from '../assets/images/close.png';
 
 const Modal = ({ children }) => (
-  <div className="modal">
+  <div className="modal closeted">
     <div className="modal__content">
       <button
         type="button"

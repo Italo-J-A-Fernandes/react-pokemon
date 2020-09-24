@@ -5,9 +5,9 @@ import plusIcon from '../assets/images/plus.png';
 const Sidebar = ({ itens, add }) => {
   return (
     <div className="sidebar">
-      {itens.map((pakomon) => {
+      {itens.map((pakomon, i) => {
         return (
-          <div key={pakomon} className="sidebar__item">
+          <div key={i} className="sidebar__item">
             ?
           </div>
         );

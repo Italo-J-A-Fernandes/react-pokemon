@@ -1,0 +1,51 @@
+.pokemon-busca-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(90deg, #43E97B 0%, #38F9D7 100%);
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 40px;
+    border: none;
+    background: no-repeat;
+    width: 63px;
+    height: 64px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    >img{
+      float: left;
+      margin-top: -17px;
+      margin-left: -17px;
+    }
+  }
+}
+
+.infoPokemon{
+  position: relative;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #F7F9FC;
+  border-radius: 24px 24px 0px 0px;
+  width: 100%;
+  height: 100%;
+  margin-top: calc(-247px / 2);
+  padding: 162px 24px;
+}
+
+@media (min-width: 720px){
+  .pokemon-busca-container {
+    width: 360px;
+    height: 559px;
+  }
+}
