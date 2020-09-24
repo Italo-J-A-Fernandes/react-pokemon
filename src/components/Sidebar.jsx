@@ -2,12 +2,12 @@ import React from 'react';
 import Button from './Button';
 import plusIcon from '../assets/images/plus.png';
 
-const Sidebar = ({ itens, add }) => {
+const Sidebar = ({ itens, add, view }) => {
   return (
     <div className="sidebar">
       {itens.map((pakomon, i) => {
         return (
-          <div key={i} className="sidebar__item">
+          <div onClick={() => view()} key={i} className="sidebar__item">
             <img src={pakomon.sprites.front_default} alt="" />
           </div>
         );
