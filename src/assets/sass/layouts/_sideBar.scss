@@ -21,7 +21,11 @@
         background-color: $color-primary-default;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+
+        > img {
+          width: 90%;
+        }
 
         &:hover {
             background-color: darken($color-primary-dark, 0.5);

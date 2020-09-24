@@ -8,7 +8,7 @@ const Sidebar = ({ itens, add }) => {
       {itens.map((pakomon, i) => {
         return (
           <div key={i} className="sidebar__item">
-            ?
+            <img src={pakomon.sprites.front_default} alt="" />
           </div>
         );
       })}
