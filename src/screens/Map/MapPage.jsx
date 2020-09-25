@@ -1,47 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from '../../components/Sidebar';
 import Modal from '../../components/Modal';
 import PokemonBusca from '../Pokemon/PokemonBusca/PokemonBusca';
+import PokemonDatail from '../Pokemon/PokemonDetail/PokemonDetail';
 
 import api from '../../services/api';
 
 const MapPage = () => {
-  const [pokemons, setPokemons] = useState([]);
-  const [pokemBusca, setBuscaPokemon] = useState();
-  const [modal, setModal] = useState();
+  const [inventario, setInventario] = useState([]);
+  const [pokemomBusca, setPokemonBusca] = useState();
+  const telasModal = [
+    <PokemonBusca resPok={pokemomBusca} capture={() => capPokemon()} />,
+    <PokemonDatail pokemon={pokemomBusca} liberar={() => libertPokemon} />,
+    <div>Criar Pokemon</div>,
+  ];
+  const [qModal, setModal] = useState(0);
 
-  function mostrarModal() {
-    switch (modal) {
-      case 1:
-        return (
-          <PokemonBusca resPok={pokemBusca} capture={() => capPokemon()} />
-        );
-      case 2:
-        return <div>Visualizar Pokemon</div>;
-
-      case 3:
-        return <div>Criar Pokemon</div>;
-
-      default:
-        return (
-          <PokemonBusca resPok={pokemBusca} capture={() => capPokemon()} />
-        );
-    }
-  }
-
-  function exibeModal() {
+  function openModal() {
     const modal = document.getElementsByClassName('modal');
     modal[0].classList.remove('closeted');
-    mostrarModal();
   }
 
-  function fecharModal() {
+  function closeModal() {
     const modal = document.getElementsByClassName('modal');
     modal[0].classList.add('closeted');
   }
 
   async function buscaAPI() {
-    if (pokemons.length > 5) {
+    if (inventario.length > 5) {
       return;
       // exibir balão de erro
     }
@@ -49,36 +35,41 @@ const MapPage = () => {
     const min = 1;
     const idPokemon = Math.floor(Math.random() * (max - min + 1) + min);
     const pokemon = await api.get(`/pokemon/${idPokemon}`);
-    await setBuscaPokemon(pokemon.data);
-    await setModal(1);
-    await exibeModal();
+    setPokemonBusca(pokemon.data);
+    setModal(0);
+    openModal();
   }
 
   async function capPokemon() {
-    const novaList = [...pokemons, pokemBusca];
-    setPokemons(novaList);
-    await setBuscaPokemon();
-    await fecharModal();
+    const novaList = [...inventario, pokemomBusca];
+    setInventario(novaList);
+    setPokemonBusca();
+    closeModal();
   }
 
-  async function addPokemon() {
+  async function libertPokemon(i) {
+    console.log(i);
+  }
+
+  function addPokemon() {
     setModal(2);
-    await exibeModal();
+    openModal();
   }
 
-  async function pokemonDatail() {
-    setModal(3);
-    await exibeModal();
+  async function pokemonDatail(index) {
+    await setPokemonBusca(inventario[index]);
+    setModal(1);
+    openModal();
   }
 
   return (
     <>
       <div className="map">
-        <Sidebar itens={pokemons} view={pokemonDatail} add={addPokemon} />
+        <Sidebar itens={inventario} view={pokemonDatail} add={addPokemon} />
         <div className="container-personagem">
           <div className="personagem" onClick={() => buscaAPI()} />
         </div>
-        <Modal>{mostrarModal()}</Modal>
+        <Modal>{telasModal[qModal]}</Modal>
       </div>
     </>
   );

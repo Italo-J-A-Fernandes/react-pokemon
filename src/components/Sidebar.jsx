@@ -7,7 +7,7 @@ const Sidebar = ({ itens, add, view }) => {
     <div className="sidebar">
       {itens.map((pakomon, i) => {
         return (
-          <div onClick={() => view()} key={i} className="sidebar__item">
+          <div onClick={() => view(i)} key={i} className="sidebar__item">
             <img src={pakomon.sprites.front_default} alt="" />
           </div>
         );
