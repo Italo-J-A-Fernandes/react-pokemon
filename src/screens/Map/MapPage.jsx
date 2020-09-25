@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../../components/Sidebar';
 import Modal from '../../components/Modal';
 import PokemonBusca from '../Pokemon/PokemonBusca/PokemonBusca';
 import PokemonDatail from '../Pokemon/PokemonDetail/PokemonDetail';
+
+import icoLoading from '../../assets/images/searchingTooltip.png';
 
 import api from '../../services/api';
 
@@ -19,6 +21,7 @@ const MapPage = () => {
     <div>Criar Pokemon</div>,
   ];
   const [qModal, setModal] = useState(0);
+  const [loding, setLoding] = useState(false);
 
   function openModal() {
     const modal = document.getElementsByClassName('modal');
@@ -35,13 +38,15 @@ const MapPage = () => {
       return;
       // exibir balão de erro
     }
+    setLoding(true);
     const max = 807;
     const min = 1;
-    const idPokemon = Math.floor(Math.random() * (max - min + 1) + min);
+    const idPokemon = await Math.floor(Math.random() * (max - min + 1) + min);
     const pokemon = await api.get(`/pokemon/${idPokemon}`);
     setPokemonTemp(pokemon.data);
     setModal(0);
     openModal();
+    setLoding(false);
   }
 
   async function capPokemon() {
@@ -78,7 +83,16 @@ const MapPage = () => {
       <div className="map">
         <Sidebar itens={inventario} view={pokemonDatail} add={addPokemon} />
         <div className="container-personagem">
-          <div className="personagem" onClick={() => buscaAPI()} />
+          {loding ? (
+            <>
+              <img className="toltip" src={icoLoading} alt="" />
+              <div className="personagem anime" />
+            </>
+          ) : (
+            <>
+              <div className="personagem" onClick={() => buscaAPI()} />
+            </>
+          )}
         </div>
         <Modal>{telasModal[qModal]}</Modal>
       </div>
