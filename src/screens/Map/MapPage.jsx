@@ -5,6 +5,8 @@ import PokemonBusca from '../Pokemon/PokemonBusca/PokemonBusca';
 import PokemonDatail from '../Pokemon/PokemonDetail/PokemonDetail';
 
 import icoLoading from '../../assets/images/searchingTooltip.png';
+import icoBusca from '../../assets/images/searchTooltip.png';
+import icoErro from '../../assets/images/tooltipError.png';
 
 import api from '../../services/api';
 
@@ -20,8 +22,12 @@ const MapPage = () => {
     />,
     <div>Criar Pokemon</div>,
   ];
+  const toltip = [
+    <img className="toltip" src={icoLoading} alt="" />,
+    <img className="toltip" src={icoErro} alt="" />,
+  ];
   const [qModal, setModal] = useState(0);
-  const [loding, setLoding] = useState(false);
+  const [qToltip, setToltip] = useState();
 
   function openModal() {
     const modal = document.getElementsByClassName('modal');
@@ -35,10 +41,11 @@ const MapPage = () => {
 
   async function buscaAPI() {
     if (inventario.length > 5) {
+      setToltip(1);
+      setTimeout(() => setToltip(), 300);
       return;
-      // exibir balão de erro
     }
-    setLoding(true);
+    setToltip(0);
     const max = 807;
     const min = 1;
     const idPokemon = await Math.floor(Math.random() * (max - min + 1) + min);
@@ -46,7 +53,7 @@ const MapPage = () => {
     setPokemonTemp(pokemon.data);
     setModal(0);
     openModal();
-    setLoding(false);
+    setToltip();
   }
 
   async function capPokemon() {
@@ -64,8 +71,9 @@ const MapPage = () => {
 
   function addPokemon() {
     if (inventario.length > 5) {
+      setToltip(1);
+      setTimeout(() => setToltip(), 300);
       return;
-      // exibir balão de erro
     }
     setModal(2);
     openModal();
@@ -83,15 +91,13 @@ const MapPage = () => {
       <div className="map">
         <Sidebar itens={inventario} view={pokemonDatail} add={addPokemon} />
         <div className="container-personagem">
-          {loding ? (
-            <>
-              <img className="toltip" src={icoLoading} alt="" />
-              <div className="personagem anime" />
-            </>
+          {toltip[qToltip]}
+          {qToltip === 0 ? (
+            <div className="personagem anime" />
           ) : (
-            <>
-              <div className="personagem" onClick={() => buscaAPI()} />
-            </>
+            <div className="personagem" onClick={() => buscaAPI()}>
+              <img className="toltip--busca" src={icoBusca} alt="" />
+            </div>
           )}
         </div>
         <Modal>{telasModal[qModal]}</Modal>

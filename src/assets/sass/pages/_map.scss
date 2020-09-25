@@ -26,12 +26,33 @@
     background-repeat: no-repeat;
     cursor: pointer;
 
+    &:hover .toltip--busca{
+      opacity: 100;
+      animation: busca 1s linear infinite alternate;
+    }
+
+    > .toltip--busca{
+      opacity: 0;
+      margin-right: -1rem;
+    }
+
     &.anime{
       position: fixed;
       width: 64px;
       height: 64px;
       background-repeat: no-repeat;
-      animation: andar 1s linear infinite;
+      animation: andar 1s ease-out infinite;
+    }
+  }
+
+  @keyframes busca {
+    from{
+      opacity: 0%;
+      margin-top: -3rem;
+    }
+    to{
+      opacity: 100%;
+      margin-top: -6rem;
     }
   }
 
