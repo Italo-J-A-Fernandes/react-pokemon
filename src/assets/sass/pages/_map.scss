@@ -27,8 +27,7 @@
     cursor: pointer;
 
     &:hover .toltip--busca{
-      opacity: 100;
-      animation: busca 1s linear infinite alternate;
+      animation: busca 1s linear 0s 2 alternate;
     }
 
     > .toltip--busca{
