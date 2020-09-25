@@ -7,7 +7,7 @@ const PokemonBusca = ({ resPok, capture }) => {
   return resPok ? (
     <div className="pokemon-busca-container">
       <Avatar src={resPok.sprites.front_default} />
-      <div className="infoPokemon --capture">
+      <div className="infoPokemon infoPokemon--capture">
         <h1>{resPok.name}</h1>
         <section>
           <span>hp</span>

@@ -6,7 +6,7 @@ const PokemonBusca = ({ pokemon, liberar }) => {
   return pokemon ? (
     <div className="pokemon-busca-container">
       <Avatar src={pokemon.sprites.front_default} />
-      <div className="infoPokemon">
+      <div className="infoPokemon infoPokemon--liberar">
         <h1>{pokemon.name}</h1>
         <section>
           <span>hp</span>

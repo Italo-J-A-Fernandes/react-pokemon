@@ -24,8 +24,8 @@
   margin-top: calc(-247px / 2);
   padding: 162px 24px;
 
-  &.--capture{
-  height: 100%;
+  &.infoPokemon--capture, &.infoPokemon--liberar{
+    height: 100%;
   }
 
   > button {
