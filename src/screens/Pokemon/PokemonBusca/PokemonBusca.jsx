@@ -7,7 +7,7 @@ const PokemonBusca = ({ resPok, capture }) => {
   return resPok ? (
     <div className="pokemon-busca-container">
       <Avatar src={resPok.sprites.front_default} />
-      <div className="infoPokemon">
+      <div className="infoPokemon infoPokemon--capture">
         <h1>{resPok.name}</h1>
         <section>
           <span>hp</span>
@@ -31,11 +31,11 @@ const PokemonBusca = ({ resPok, capture }) => {
             })
             .join(', ')}
         </span>
+        <Button
+          onClick={capture}
+          icon={<img src={pokeball} alt="bola pokemon" />}
+        />
       </div>
-      <Button
-        onClick={capture}
-        icon={<img src={pokeball} alt="bola pokemon" />}
-      />
     </div>
   ) : (
     <div className="pokemon-busca-container">

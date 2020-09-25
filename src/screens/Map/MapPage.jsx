@@ -3,6 +3,7 @@ import Sidebar from '../../components/Sidebar';
 import Modal from '../../components/Modal';
 import PokemonBusca from '../Pokemon/PokemonBusca/PokemonBusca';
 import PokemonDatail from '../Pokemon/PokemonDetail/PokemonDetail';
+import PokemonCreate from '../Pokemon/PokemonCreate/PokemonCreate';
 
 import icoLoading from '../../assets/images/searchingTooltip.png';
 import icoBusca from '../../assets/images/searchTooltip.png';
@@ -20,7 +21,7 @@ const MapPage = () => {
       pokemon={pokemomTemp}
       liberar={() => libertPokemon(pokemonInd)}
     />,
-    <div>Criar Pokemon</div>,
+    <PokemonCreate create={pokemonCreate} />,
   ];
   const toltip = [
     <img className="toltip" src={icoLoading} alt="" />,
@@ -70,7 +71,7 @@ const MapPage = () => {
     closeModal();
   }
 
-  function addPokemon() {
+  function addPokemonInventario() {
     if (inventario.length > 5) {
       setToltip(1);
       setTimeout(() => setToltip(2), 2000);
@@ -87,10 +88,21 @@ const MapPage = () => {
     openModal();
   }
 
+  function pokemonCreate(dados) {
+    const novaList = [...inventario, dados];
+    setInventario(novaList);
+
+    closeModal();
+  }
+
   return (
     <>
       <div className="map">
-        <Sidebar itens={inventario} view={pokemonDatail} add={addPokemon} />
+        <Sidebar
+          itens={inventario}
+          view={pokemonDatail}
+          add={addPokemonInventario}
+        />
         <div className="container-personagem">
           {qToltip === 0 ? (
             <div className="personagem anime">{toltip[qToltip]}</div>

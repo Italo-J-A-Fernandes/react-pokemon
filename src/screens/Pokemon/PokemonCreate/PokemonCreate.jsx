@@ -41,7 +41,6 @@ const PokemonCreate = ({ create }) => {
       },
     },
   ];
-
   function enviarDados() {
     create({
       abilities: hab,
