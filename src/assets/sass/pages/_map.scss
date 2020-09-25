@@ -13,11 +13,6 @@
   height: 100vh;
   width: 100%;
 
-  > .toltip {
-    margin-top: -12rem;
-    margin-right: -1rem;
-  }
-
   > .personagem{
     position: fixed;
     width: 64px;
@@ -30,9 +25,22 @@
       animation: busca 1s linear 0s 2 alternate;
     }
 
+    &:hover .toltip--erro{
+      opacity: 100;
+    }
+
     > .toltip--busca{
       opacity: 0;
+    }
+
+    > .toltip {
+      margin-top: -12rem;
       margin-right: -1rem;
+
+      &.toltip--erro{
+        opacity: 0;
+        animation: busca 1s linear 0s 2 alternate;
+      }
     }
 
     &.anime{

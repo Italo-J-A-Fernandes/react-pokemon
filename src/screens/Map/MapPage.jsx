@@ -24,10 +24,11 @@ const MapPage = () => {
   ];
   const toltip = [
     <img className="toltip" src={icoLoading} alt="" />,
-    <img className="toltip" src={icoErro} alt="" />,
+    <img className="toltip toltip--erro" src={icoErro} alt="" />,
+    <img className="toltip toltip--busca" src={icoBusca} alt="" />,
   ];
   const [qModal, setModal] = useState(0);
-  const [qToltip, setToltip] = useState();
+  const [qToltip, setToltip] = useState(2);
 
   function openModal() {
     const modal = document.getElementsByClassName('modal');
@@ -42,7 +43,7 @@ const MapPage = () => {
   async function buscaAPI() {
     if (inventario.length > 5) {
       setToltip(1);
-      setTimeout(() => setToltip(), 300);
+      setTimeout(() => setToltip(2), 2000);
       return;
     }
     setToltip(0);
@@ -53,10 +54,10 @@ const MapPage = () => {
     setPokemonTemp(pokemon.data);
     setModal(0);
     openModal();
-    setToltip();
+    setToltip(2);
   }
 
-  async function capPokemon() {
+  function capPokemon() {
     const novaList = [...inventario, pokemomTemp];
     setInventario(novaList);
     setPokemonTemp();
@@ -72,7 +73,7 @@ const MapPage = () => {
   function addPokemon() {
     if (inventario.length > 5) {
       setToltip(1);
-      setTimeout(() => setToltip(), 300);
+      setTimeout(() => setToltip(2), 2000);
       return;
     }
     setModal(2);
@@ -91,12 +92,11 @@ const MapPage = () => {
       <div className="map">
         <Sidebar itens={inventario} view={pokemonDatail} add={addPokemon} />
         <div className="container-personagem">
-          {toltip[qToltip]}
           {qToltip === 0 ? (
-            <div className="personagem anime" />
+            <div className="personagem anime">{toltip[qToltip]}</div>
           ) : (
             <div className="personagem" onClick={() => buscaAPI()}>
-              <img className="toltip--busca" src={icoBusca} alt="" />
+              {toltip[qToltip]}
             </div>
           )}
         </div>
