@@ -30,8 +30,8 @@ const PokemonBusca = ({ pokemon, liberar }) => {
             })
             .join(', ')}
         </span>
+        <Button onClick={liberar} text="liberar pokemon" />
       </div>
-      <Button onClick={liberar} text="liberar pokemon" />
     </div>
   ) : (
     <div className="pokemon-busca-container">

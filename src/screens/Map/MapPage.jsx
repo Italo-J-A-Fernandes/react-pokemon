@@ -3,6 +3,7 @@ import Sidebar from '../../components/Sidebar';
 import Modal from '../../components/Modal';
 import PokemonBusca from '../Pokemon/PokemonBusca/PokemonBusca';
 import PokemonDatail from '../Pokemon/PokemonDetail/PokemonDetail';
+import PokemonCreate from '../Pokemon/PokemonCreate/PokemonCreate';
 
 import icoLoading from '../../assets/images/searchingTooltip.png';
 import icoBusca from '../../assets/images/searchTooltip.png';
@@ -20,7 +21,7 @@ const MapPage = () => {
       pokemon={pokemomTemp}
       liberar={() => libertPokemon(pokemonInd)}
     />,
-    <div>Criar Pokemon</div>,
+    <PokemonCreate />,
   ];
   const toltip = [
     <img className="toltip" src={icoLoading} alt="" />,
