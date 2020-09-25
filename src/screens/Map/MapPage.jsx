@@ -8,10 +8,14 @@ import api from '../../services/api';
 
 const MapPage = () => {
   const [inventario, setInventario] = useState([]);
-  const [pokemomBusca, setPokemonBusca] = useState();
+  const [pokemomTemp, setPokemonTemp] = useState();
+  const [pokemonInd, serPokemonInd] = useState();
   const telasModal = [
-    <PokemonBusca resPok={pokemomBusca} capture={() => capPokemon()} />,
-    <PokemonDatail pokemon={pokemomBusca} liberar={() => libertPokemon} />,
+    <PokemonBusca resPok={pokemomTemp} capture={() => capPokemon()} />,
+    <PokemonDatail
+      pokemon={pokemomTemp}
+      liberar={() => libertPokemon(pokemonInd)}
+    />,
     <div>Criar Pokemon</div>,
   ];
   const [qModal, setModal] = useState(0);
@@ -35,30 +39,37 @@ const MapPage = () => {
     const min = 1;
     const idPokemon = Math.floor(Math.random() * (max - min + 1) + min);
     const pokemon = await api.get(`/pokemon/${idPokemon}`);
-    setPokemonBusca(pokemon.data);
+    setPokemonTemp(pokemon.data);
     setModal(0);
     openModal();
   }
 
   async function capPokemon() {
-    const novaList = [...inventario, pokemomBusca];
+    const novaList = [...inventario, pokemomTemp];
     setInventario(novaList);
-    setPokemonBusca();
+    setPokemonTemp();
     closeModal();
   }
 
-  async function libertPokemon(i) {
-    console.log(i);
+  function libertPokemon(i) {
+    inventario.splice(i, 1);
+    setInventario([...inventario]);
+    closeModal();
   }
 
   function addPokemon() {
+    if (inventario.length > 5) {
+      return;
+      // exibir balão de erro
+    }
     setModal(2);
     openModal();
   }
 
   async function pokemonDatail(index) {
-    await setPokemonBusca(inventario[index]);
+    await setPokemonTemp(inventario[index]);
     setModal(1);
+    serPokemonInd(index);
     openModal();
   }
 

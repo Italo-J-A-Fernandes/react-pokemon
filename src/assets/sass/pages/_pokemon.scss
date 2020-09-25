@@ -11,21 +11,9 @@
     width: 0px;
   }
 
-  button {
+  > button {
     position: absolute;
     bottom: 40px;
-    border: none;
-    background: no-repeat;
-    width: 63px;
-    height: 64px;
-    border-radius: 50%;
-    cursor: pointer;
-
-    >img{
-      float: left;
-      margin-top: -17px;
-      margin-left: -17px;
-    }
   }
 }
 

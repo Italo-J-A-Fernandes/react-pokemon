@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from '../../../components/Avatar/Avatar';
+import Button from '../../../components/Button';
 import pokeball from '../../../assets/images/pokeball.png';
 
 const PokemonBusca = ({ resPok, capture }) => {
@@ -31,9 +32,10 @@ const PokemonBusca = ({ resPok, capture }) => {
             .join(', ')}
         </span>
       </div>
-      <button type="button" onClick={capture}>
-        <img src={pokeball} alt="" />
-      </button>
+      <Button
+        onClick={capture}
+        icon={<img src={pokeball} alt="bola pokemon" />}
+      />
     </div>
   ) : (
     <div className="pokemon-busca-container">
