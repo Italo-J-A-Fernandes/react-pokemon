@@ -15,22 +15,64 @@
 .infoPokemon{
   position: relative;
   display: flex;
-  // justify-content: center;
   align-items: center;
   flex-direction: column;
   background: #F7F9FC;
   border-radius: 24px 24px 0px 0px;
   width: 100%;
-  margin-top: calc(-247px / 2);
-  padding: 162px 24px;
+  margin-top: calc(-24.7rem / 2);
+  padding: 16.2rem 2.4rem;
+
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 3.6rem;
+  }
 
   &.infoPokemon--capture, &.infoPokemon--liberar{
     height: 100%;
   }
 
   > button {
-    position: absolute;
-    bottom: 40px;
+    position: fixed;
+    bottom: 5rem;
+  }
+
+  > .tipos {
+    margin-top: 3rem;
+
+    > .typSubtitle{
+      text-transform: uppercase;
+    }
+  }
+
+  > .habilidades {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4.2rem;
+
+    > .typSubtitle{
+      text-transform: uppercase;
+    }
+  }
+}
+.dadosBasicos{
+  display: flex;
+  width: 100%;
+
+
+  > .dadosBasicos__dadosIniciais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1
+  }
+
+  > .dadosBasicos__dadosIniciais + .dadosBasicos__dadosIniciais {
+    border-left: 1px solid $color-neutral-500;
   }
 }
 
@@ -42,4 +84,5 @@
   .infoPokemon{
     height: auto;
   }
+
 }

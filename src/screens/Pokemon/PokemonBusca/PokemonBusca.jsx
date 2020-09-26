@@ -8,29 +8,39 @@ const PokemonBusca = ({ resPok, capture }) => {
     <div className="pokemon-busca-container">
       <Avatar src={resPok.sprites.front_default} />
       <div className="infoPokemon infoPokemon--capture">
-        <h1>{resPok.name}</h1>
-        <section>
-          <span>hp</span>
-          <span>
-            {resPok.stats[0].base_stat}/{resPok.stats[0].base_stat}
-          </span>
-          <span>altura</span>
-          <span>{(resPok.height / 10).toFixed(1)} m</span>
-          <span>peso</span>
-          <span>{(resPok.weight / 10).toFixed(1)} kg</span>
+        <h1 className="typTitle">{resPok.name}</h1>
+        <section className="dadosBasicos">
+          <div className="dadosBasicos__dadosIniciais">
+            <h3 className="typLabel">hp</h3>
+            <p className="typTitle">
+              {resPok.stats[0].base_stat}/{resPok.stats[0].base_stat}
+            </p>
+          </div>
+          <div className="dadosBasicos__dadosIniciais">
+            <h3 className="typLabel">altura</h3>
+            <p className="typTitle">{(resPok.height / 10).toFixed(1)} m</p>
+          </div>
+          <div className="dadosBasicos__dadosIniciais">
+            <h3 className="typLabel">peso</h3>
+            <p className="typTitle">{(resPok.weight / 10).toFixed(1)} kg</p>
+          </div>
         </section>
-        <h2>Tipo</h2>
-        {resPok.types.map((tipo, i) => {
-          return <span key={i}>{tipo.type.name}</span>;
-        })}
-        <h2>Habilidades</h2>
-        <span>
-          {resPok.abilities
-            .map((hab) => {
-              return hab.ability.name;
-            })
-            .join(', ')}
-        </span>
+        <section className="tipos">
+          <h2 className="typSubtitle">Tipo</h2>
+          {resPok.types.map((tipo, i) => {
+            return <p key={i}>{tipo.type.name}</p>;
+          })}
+        </section>
+        <section className="habilidades">
+          <h2 className="typSubtitle">Habilidades</h2>
+          <p className="typLabel">
+            {resPok.abilities
+              .map((hab) => {
+                return hab.ability.name;
+              })
+              .join(', ')}
+          </p>
+        </section>
         <Button
           onClick={capture}
           icon={<img src={pokeball} alt="bola pokemon" />}

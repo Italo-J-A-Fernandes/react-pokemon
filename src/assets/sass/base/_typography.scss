@@ -3,3 +3,33 @@ body {
     line-height: 1;
     color: $color-black;
 }
+
+.typTitle{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-neutral-700;
+}
+
+.typSubtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: $color-neutral-700;
+}
+
+.typLabel {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-neutral-700;
+}
+
+.typButton {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $color-neutral-700;
+}

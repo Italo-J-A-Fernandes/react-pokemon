@@ -4,9 +4,9 @@ export const AvatarContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 247px;
-  height: 247px;
-  margin-top: 32px;
+  width: 24.7rem;
+  height: 24.7rem;
+  margin-top: 3.2rem;
   border-radius: 50%;
   border: 4px solid #00d68f;
   box-sizing: border-box;
