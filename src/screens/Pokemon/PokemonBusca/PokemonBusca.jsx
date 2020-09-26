@@ -26,13 +26,13 @@ const PokemonBusca = ({ resPok, capture }) => {
           </div>
         </section>
         <section className="tipos">
-          <h2 className="typSubtitle">Tipo</h2>
+          <span className="typSubtitle">Tipo</span>
           {resPok.types.map((tipo, i) => {
             return <p key={i}>{tipo.type.name}</p>;
           })}
         </section>
         <section className="habilidades">
-          <h2 className="typSubtitle">Habilidades</h2>
+          <span className="typSubtitle">Habilidades</span>
           <p className="typLabel">
             {resPok.abilities
               .map((hab) => {

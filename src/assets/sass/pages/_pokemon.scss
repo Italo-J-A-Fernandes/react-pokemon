@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: #F7F9FC;
+  background: $color-neutral-200;
   border-radius: 24px 24px 0px 0px;
   width: 100%;
   margin-top: calc(-24.7rem / 2);
@@ -38,30 +38,48 @@
   }
 
   > .tipos {
-    margin-top: 3rem;
+    margin-top: 4.2rem;
+    width: 100%;
+    border-top: 1px solid $color-neutral-500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     > .typSubtitle{
       text-transform: uppercase;
+      background: $color-neutral-200;
+      margin-top: -2rem;
+      display: flex;
+      padding: 0.5rem;
     }
   }
 
   > .habilidades {
     display: flex;
     width: 100%;
+    border-top: 1px solid $color-neutral-500;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 4.2rem;
+    margin-top: 5.4rem;
 
     > .typSubtitle{
       text-transform: uppercase;
+      background: $color-neutral-200;
+      margin-top: -2rem;
+      display: flex;
+      padding: 0.5rem;
+    }
+
+    > .typLabel{
+      margin-top: 3rem;
     }
   }
 }
 .dadosBasicos{
   display: flex;
   width: 100%;
-
 
   > .dadosBasicos__dadosIniciais {
     display: flex;
@@ -83,6 +101,18 @@
   }
   .infoPokemon{
     height: auto;
+
+    > .tipos {
+      > .typSubtitle{
+        margin-top: -1.6rem;
+      }
+    }
+
+    > .habilidades {
+      > .typSubtitle{
+        margin-top: -1.6rem;
+      }
+    }
   }
 
 }
