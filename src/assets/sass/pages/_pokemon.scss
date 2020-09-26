@@ -139,6 +139,11 @@
   .infoPokemon{
     height: auto;
 
+    > button {
+      position: fixed;
+      bottom: 21rem;
+    }
+
     &.infoPokemon--capture, &.infoPokemon--liberar{
       height: auto;
     }
@@ -156,4 +161,22 @@
     }
   }
 
+}
+
+@media (min-width: 1200px){
+  .infoPokemon{
+    > button {
+      position: fixed;
+      bottom: 17rem;
+    }
+  }
+}
+
+@media (min-width: 1440px){
+  .infoPokemon{
+    > button {
+      position: fixed;
+      bottom: 14rem;
+    }
+  }
 }
