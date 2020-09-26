@@ -76,6 +76,42 @@
       margin-top: 3rem;
     }
   }
+
+  >.estatisticas{
+    display: flex;
+    width: 100%;
+    border-top: 1px solid $color-neutral-500;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6.2rem;
+
+    > .typSubtitle{
+      text-transform: uppercase;
+      background: $color-neutral-200;
+      margin-top: -2rem;
+      display: flex;
+      padding: 0.5rem;
+    }
+
+    > .estatisticas__item{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      >.typLabel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+  }
 }
 .dadosBasicos{
   display: flex;
@@ -94,6 +130,7 @@
   }
 }
 
+
 @media (min-width: 720px){
   .pokemon-busca-container {
     width: 360px;
@@ -101,6 +138,10 @@
   }
   .infoPokemon{
     height: auto;
+
+    &.infoPokemon--capture, &.infoPokemon--liberar{
+      height: auto;
+    }
 
     > .tipos {
       > .typSubtitle{

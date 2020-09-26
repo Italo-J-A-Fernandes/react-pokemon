@@ -1,10 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
 body {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     line-height: 1;
     color: $color-black;
 }
 
 .typTitle{
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 24px;
@@ -12,6 +16,7 @@ body {
 }
 
 .typSubtitle {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 24px;
@@ -19,6 +24,7 @@ body {
 }
 
 .typLabel {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 16px;
@@ -27,6 +33,7 @@ body {
 }
 
 .typButton {
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 24px;
